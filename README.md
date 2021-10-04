@@ -21,20 +21,20 @@ Notification will contain datetime of commit, commit message, and direct link to
 
 (b) Create Applet
 
-![](/img/ifttt_1.png)
+![](./img/ifttt_1.png)
 
 Under "If", use Webhook service and set up trigger event name. 
 
-![](/img/ifttt_2.png)
+![](./img/ifttt_2.png)
 
 Under "Then", use Telegram/Twitter service and configure notification message.
 
-![](/img/ifttt_3.png)
+![](./img/ifttt_3.png)
  
 (c) Obtain Webhook Key
 
 Webhook Documentation in https://ifttt.com/maker_webhooks
 
-![](/img/ifttt_4.png)
+![](./img/ifttt_4.png)
 
 ### 2. Set up Github Actions workflow

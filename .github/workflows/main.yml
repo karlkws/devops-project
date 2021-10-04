@@ -39,7 +39,7 @@ jobs:
           df -h
           which wget
           which curl
-          curl -X POST -H "Content-Type: application/json" -d '{"value1":"New push commit","value2":"${{ github.event.head_commit.message }}","value3":""}' https://maker.ifttt.com/trigger/notifytelegram/with/key/${{ secrets.IFTTT_KEY }}
+          curl -X POST -H "Content-Type: application/json" -d '{"value1":"New push commit","value2":"${{ github.event.head_commit.message }}","value3":"${{ github.sha }}"}' https://maker.ifttt.com/trigger/notifytelegram/with/key/${{ secrets.IFTTT_KEY }}
           
       # notifytwitter trigger event
       - name: Notify Telegram Channel
@@ -51,4 +51,4 @@ jobs:
           df -h
           which wget
           which curl
-          curl -X POST -H "Content-Type: application/json" -d '{"value1":"New push commit","value2":"${{ github.event.head_commit.message }}","value3":""}' https://maker.ifttt.com/trigger/notifytwitter/with/key/${{ secrets.IFTTT_KEY }}
+          curl -X POST -H "Content-Type: application/json" -d '{"value1":"New push commit","value2":"${{ github.event.head_commit.message }}","value3":"${{ github.sha }}"}' https://maker.ifttt.com/trigger/notifytwitter/with/key/${{ secrets.IFTTT_KEY }}

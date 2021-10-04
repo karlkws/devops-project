@@ -44,7 +44,7 @@ jobs:
       # notifytwitter trigger event
       - name: Notify Telegram Channel
         run: |
-          echo Notifying Telegram Channel @DevOps_Karl
+          echo Notifying Twitter Channel @DevOps_Karl
           date
           ls -la
           uname -a

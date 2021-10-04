@@ -32,11 +32,13 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Notify Telegram Channel
         run: |
-          echo Notifying Telegram Channel DevOps_Karl
+          echo Notifying Telegram Channel @DevOps_Karl
           date
           ls -la
           uname -a
           df -h
           which wget
           which curl
-          curl -X POST -H "Content-Type: application/json" -d '{"value1":"New push commit in","value2":"","value3":""}' https://maker.ifttt.com/trigger/notifytelegram/with/key/${{ secrets.IFTTT_KEY }}
+          curl -X POST -H "Content-Type: application/json" -d '{"value1":"New push commit","value2":${{ github.event.head_commit.message }},"value3":"in"}' https://maker.ifttt.com/trigger/notifytelegram/with/key/${{ secrets.IFTTT_KEY }}
+          
+      

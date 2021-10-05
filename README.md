@@ -6,6 +6,8 @@ Base app.js cloned from https://github.com/u1i/nodejs-api
 
 ### [Outcome #1] 
 
+![](./img/logo1.png)
+
 Pushing new commits = GitHub actions will automate notifications on: 
 * Telegram channel (https://t.me/devops_karl)
 * Twitter (https://twitter.com/devops_karl) 
@@ -13,6 +15,8 @@ Pushing new commits = GitHub actions will automate notifications on:
 Notification message will be comprised of commit datetime, commit message, and commit link to view code changes. 
 <br>
 ### [Outcome #2]
+
+![](./img/logo2.png)
 
 Using GitHub actions: 
 * Create Docker container and push to gcr.io
@@ -87,6 +91,7 @@ where `github.event.head_commit.message` is the commit message and `github.sha` 
 
 * Enable Cloud Build API and Cloud Run API
 * Creating service account and setting role permissions
+![](./img/gcp_iam.png)
 * Create Credential keys
 
 (c) Set up GitHub secrets to be used in workflow file (deploy.yaml)

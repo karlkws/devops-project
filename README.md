@@ -1,17 +1,35 @@
 # NUS Fintech DevOps Project #2: CI/CD
 
+Base app.js cloned from https://github.com/u1i/nodejs-api
+
 ## Desired Outcome: 
 
-Pushing new commits = Automatic notification on: 
+### [Outcome #1] 
+
+Pushing new commits = GitHub actions will automate notifications on: 
 * Telegram channel (https://t.me/devops_karl)
 * Twitter (https://twitter.com/devops_karl) 
 
-Notification will contain datetime of commit, commit message, and direct link to the commit to view code changes. 
+Notification message will be comprised of commit datetime, commit message, and commit link to view code changes. 
+<br>
+### [Outcome #2]
+
+Using GitHub actions: 
+* Create Docker container and push to gcr.io
+* Deploy to Google Cloud Run 
+
+Live URL: 
+
+https://devopskarl-rwdtppcoza-uc.a.run.app/
+
+https://devopskarl-rwdtppcoza-uc.a.run.app/fx
+
+https://devopskarl-rwdtppcoza-uc.a.run.app/fx-static
 
 
 ## Steps Taken:
 
-### 1. Set up IFTTT Applet
+### 1. For Outcome #1
 
 <b>(a) Link IFTTT to Telegram/Twitter</b>
 
@@ -20,7 +38,7 @@ Notification will contain datetime of commit, commit message, and direct link to
 - IFTTT to Twitter account: https://ifttt.com/twitter
 
 <br> 
-<b>(b) Create Applet</b>
+<b>(b) Create Applet on IFTTT</b>
 <br>
 <br>
 
@@ -37,11 +55,11 @@ Under "Then", use Telegram/Twitter service and configure notification message.
 
 Obtain from Webhook Documentation in https://ifttt.com/maker_webhooks.
 
-Set up as `IFTTT_KEY` in Github Secrets. 
+Set up as `IFTTT_KEY` in GitHub secrets. 
 
 <br>
 
-<b>(d) Set up workflow .yaml file</b>
+<b>(d) Set up workflow file (main.yaml)</b>
 
 E.g. For telegram notification,
 
@@ -53,3 +71,27 @@ curl -X POST -H "Content-Type: application/json" -d '{"value1":"New push commit"
 ```
 
 where `github.event.head_commit.message` is the commit message and `github.sha` is the commit SHA (for commit's URL link).  
+
+
+<br>
+<br>
+<br>
+
+### 2. For Outcome #2
+
+(a) Set up Dockerfile for container
+
+* Using ubuntu 18.04 
+
+(b) Configuring Google Cloud Platform
+
+* Enable Cloud Build API and Cloud Run API
+* Creating service account and setting role permissions
+* Create Credential keys
+
+(c) Set up GitHub secrets to be used in workflow file (deploy.yaml)
+
+* `GCP_APPLICATION` = application name
+* `GCP_CREDENTIALS` = exported .json file from credential keys 
+* `GCP_EMAIL` = service account email 
+* `GCP_PROJECT` = project ID

@@ -4,7 +4,7 @@
 
 Pushing new commits = Automatic notification on: 
 * Telegram channel (https://t.me/devops_karl)
-* Twitter (https://t.me/devops_karl) 
+* Twitter (https://twitter.com/devops_karl) 
 
 Notification will contain datetime of commit, commit message, and direct link to the commit to view code changes. 
 
@@ -35,8 +35,19 @@ Under "Then", use Telegram/Twitter service and configure notification message.
  
 <b>(c) Obtain Webhook Key</b>
 
-Webhook Documentation in https://ifttt.com/maker_webhooks.
+Obtain from Webhook Documentation in https://ifttt.com/maker_webhooks.
+
+Set up as IFTTT_KEY in Github Secrets. 
 
 <br>
 
-### 2. Set up Github Actions workflow
+<b>(d) Set up workflow .yaml file</b>
+
+under steps, run: (e.g. for telegram notification)
+
+
+```
+curl -X POST -H "Content-Type: application/json" -d '{"value1":"New push commit","value2":"${{ github.event.head_commit.message }}","value3":"${{ github.sha }}"}' https://maker.ifttt.com/trigger/notifytelegram/with/key/${{ secrets.IFTTT_KEY }}
+```
+
+where `github.event.head_commit.message` is the commit message and `github.sha` is the commit SHA (for commit's URL link).  

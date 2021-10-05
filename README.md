@@ -37,13 +37,15 @@ Under "Then", use Telegram/Twitter service and configure notification message.
 
 Obtain from Webhook Documentation in https://ifttt.com/maker_webhooks.
 
-Set up as IFTTT_KEY in Github Secrets. 
+Set up as `IFTTT_KEY` in Github Secrets. 
 
 <br>
 
 <b>(d) Set up workflow .yaml file</b>
 
-under steps, run: (e.g. for telegram notification)
+E.g. For telegram notification,
+
+Under steps, run: 
 
 
 ```

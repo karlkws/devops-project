@@ -5,7 +5,8 @@ app.listen(8080, () => {
 });
 
 app.get("/", (req, res) => {
- res.send("Hello! This is version v1.0 of devopskarl for NUS Fintech DevOps Project.\nThis project is containerized with Docker and deployed via Github actions to Google Cloud Run.");
+ res.write("Hello! This is version v1.0 of devopskarl for NUS Fintech DevOps Project."); 
+ res.write("This project is containerized using Docker and deployed to Google Cloud Run using GitHub actions.");
 });
 
 

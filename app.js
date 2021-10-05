@@ -1,19 +1,16 @@
 var express = require("express");
 var app = express();
 app.listen(8080, () => {
- console.log("Server running on port 3000");
+ console.log("Server running on port 8080");
 });
 
 app.get("/", (req, res) => {
- res.send(["Hello! This is version 0.16"]);
+ res.send(["Hello! This is version v1.0 of devopskarl for NUS Fintech DevOps Project.<br>This project is containerized with Docker and deployed via Github actions to Google Cloud Run."]);
 });
 
-app.get("/api", (req, res, next) => {
- res.json(["Lorem","Ipsum","Dolor","Sit","Amet"]);
-});
 
 app.get("/fx-static", (req, res, next) => {
- res.json({"sell": "589.181", "timestamp": "2020-06-17 14:42:34.492974", "buy": "489.1"});
+ res.json({"sell": "988.181", "timestamp": "2021-10-01 14:30:40", "buy": "688.1"});
 });
 
 app.get("/fx", (req, res, next) => {
@@ -25,7 +22,7 @@ app.get("/fx", (req, res, next) => {
  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
  var dateTime = date+' '+time;
 
- res.json({"sell": "487." + rand1, "timestamp": dateTime, "buy": "387." + rand2});
+ res.json({"sell": "1500." + rand1, "timestamp": dateTime, "buy": "2500." + rand2});
 });
 
 app.get("/random", (req, res, next) => {

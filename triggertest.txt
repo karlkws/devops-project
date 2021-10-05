@@ -1,4 +1,4 @@
-Test file for new commit
+Test file for triggering new commits
 
 
 New push
@@ -9,4 +9,4 @@ tsetsetegsegetset
 New text to test pushing new commit
 
 New push trigger 1
- 
+New push trigger 2

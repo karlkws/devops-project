@@ -10,3 +10,4 @@ New text to test pushing new commit
 
 New push trigger 1
 New push trigger 2
+New push trigger 3

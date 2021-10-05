@@ -52,3 +52,30 @@ jobs:
           which wget
           which curl
           curl -X POST -H "Content-Type: application/json" -d '{"value1":"New push commit","value2":"${{ github.event.head_commit.message }}","value3":"${{ github.sha }}"}' https://maker.ifttt.com/trigger/notifytwitter/with/key/${{ secrets.IFTTT_KEY }}
+          
+     # Setup gcloud CLI
+      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        with:
+          service_account_email: ${{ secrets.GCP_EMAIL }}
+          service_account_key: ${{ secrets.GCP_CREDENTIALS }}
+          export_default_credentials: true
+    
+    # Configure Docker with Credentials
+      - name: Configure Docker
+        run: |
+          gcloud auth configure-docker
+      
+    # Build the Docker image
+      - name: Build & Publish
+        run: |
+          gcloud config set project ${{ secrets.GCP_PROJECT }}
+          gcloud builds submit --tag gcr.io/${{ secrets.GCP_PROJECT }}/${{ secrets.GCP_APPLICATION }}
+          gcloud config set run/region us-central1
+      
+    # Deploy the Docker image to the GKE cluster
+      - name: Deploy
+        run: |
+          gcloud run deploy ${{ secrets.GCP_APPLICATION }} --image gcr.io/${{ secrets.GCP_PROJECT }}/${{ secrets.GCP_APPLICATION }} \
+          --platform managed \
+          --allow-unauthenticated \
+          --memory 512M     

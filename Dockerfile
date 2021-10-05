@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 MAINTAINER karlkws95@gmail.com
-EXPOSE 8080
+EXPOSE 3000
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Singapore
 
@@ -11,7 +11,7 @@ RUN npm install -g express-generator
 RUN npm install express --save
 RUN npm install express-session --save
 RUN useradd -ms /bin/bash user
-COPY app.js /home/user/app.js
+COPY main.js /home/user/main.js
 COPY start.sh /home/user/start.sh
 RUN chmod a+x /home/user/start.sh
 USER user

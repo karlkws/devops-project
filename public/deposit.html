@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+   
+
+    
+    <title>Deposit</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <h1>Deposit</h1>
+    <p class = 'link'></p>
+    
+</head>
+<body>
+    <div class = 'balance'></div>
+<div>
+    <h1 id="symbol"></h1>
+    
+    
+    <form id="myform">
+        
+        <label for="Currency">Currency :</label><br>
+        <input type="text" id="Currency" name="Currency" placeholder="eg.EUR"><br><br>
+
+        <label for="Value">Amount for Deposit :</label><br>
+        <input type="int" id="Value" name="Value" placeholder="eg.100">
+
+
+      </form>
+      <br>      
+    
+       
+</div>
+
+
+
+
+</body>
+<script src="deposit.js"></script>
+<script src="getuser.js"></script>
+<footer>
+    <br>
+    <button class ="btn btn-dark" id='back-btn' onclick="goBack()">Back to Dashboard</button>
+</footer>
+</html>

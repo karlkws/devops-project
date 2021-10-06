@@ -1,0 +1,113 @@
+  
+   table {
+     font-family: arial, sans-serif;
+     border-collapse: collapse;
+     width: 50%;
+     display: contents;
+    justify-content: space-between;
+    position: relative;
+   }
+   
+   th {
+     border: 1px solid #18191A;
+     background-color : #a0d2eb;
+     text-align: center;
+     padding: 10px;
+   }
+
+   td {
+    border: 1px solid #1a1a18;
+    background-color : #FFFEF7;
+    text-align: left;
+    padding: 10px;
+  }
+
+   #base , #quote {
+    text-transform: uppercase;
+   }
+   
+   #Value , #transaction{
+     
+    padding: 5px;
+   }
+  
+
+   body {
+    
+  width: 700px ;
+  margin-left: auto ;
+  margin-right: auto ;
+  background-color: #e5eaf5;
+  } 
+
+  ol { 
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .list li {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 5px 0;
+  }
+
+  .list li.GBP {
+    border-right: 5px solid #2ecc71;
+  }
+  
+  .list li.EUR {
+    border-right: 5px solid #c0392b;
+  }
+
+  .list li.USD {
+    border-right: 5px solid blue;
+  }
+
+  .list li.SGD {
+    border-right: 5px solid yellow;
+  }
+
+  .link{
+    border: 1px solid #745296;
+  }
+
+  button {
+
+    margin: 15px auto 0;
+    padding: 3px 20px;
+
+   
+    font-size: 14px;
+    text-align: center;
+    border : 1px solid #2C3539;
+    text-transform: uppercase;
+    /* text-decoration: none; */
+    /* outline: none; */
+}
+
+button:hover {
+    transition: 0.5s;
+    background-color: #8458B3;
+    color: #e5eaf5;
+    text-decoration: underline;
+    letter-spacing: 0.5px;
+}
+
+#logo {
+  display: inline-block;
+  margin: 15px; /* margin: 20px was off */
+  height: 150px;
+  width: auto; /* correct proportions to specified height */
+  border-radius: 50%; /* makes it a circle */
+}

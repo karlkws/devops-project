@@ -1,6 +1,6 @@
 function getUserName() {
     //e.preventDefault();       //?
-    var querryStr = "http://localhost:3000/admin";
+    var querryStr = "https://devopskarl-rwdtppcoza-uc.a.run.app/admin";
     console.log(querryStr);
 
     $.getJSON(querryStr, function (response) {
@@ -10,7 +10,7 @@ function getUserName() {
         // console.log(u_id);
 
 
-      var emailStr =  "http://localhost:3000/user/by-email?email=" + email;
+      var emailStr =  "https://devopskarl-rwdtppcoza-uc.a.run.app/user/by-email?email=" + email;
       //console.log(emailStr);
       $.getJSON(emailStr, function (response) {
           //console.log(response[0].first_name);
@@ -22,7 +22,7 @@ function getUserName() {
 
 
 function logOut() {
-  window.location.href = "http://localhost:3000/logout"
+  window.location.href = '/logout';
 };
 
 getUserName();

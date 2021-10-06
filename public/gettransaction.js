@@ -1,6 +1,6 @@
 function getTxn() {
   //e.preventDefault();     //?
-  var querryStr = "http://localhost:3000/admin";
+  var querryStr = "https://devopskarl-rwdtppcoza-uc.a.run.app/admin";
   console.log(querryStr);
   $.getJSON(querryStr, function (response) {
       var email = response.e_mail;
@@ -8,7 +8,7 @@ function getTxn() {
       // console.log(u_id);
             
       //e.preventDefault();     //?
-      var querryStr =  "http://localhost:3000/transaction/by-user_id?user_id=" + u_id;
+      var querryStr =  "https://devopskarl-rwdtppcoza-uc.a.run.app/transaction/by-user_id?user_id=" + u_id;
       // console.log(querryStr);
       $.getJSON(querryStr, mydata );
     

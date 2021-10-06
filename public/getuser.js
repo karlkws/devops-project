@@ -1,6 +1,6 @@
 function getUserInfo() {
   //e.preventDefault();     //?
-  var querryStr = "http://localhost:3000/admin";
+  var querryStr = "https://devopskarl-rwdtppcoza-uc.a.run.app/admin";
   console.log(querryStr);
   $.getJSON(querryStr, function (response) {
       var email = response.e_mail;
@@ -9,7 +9,7 @@ function getUserInfo() {
       //console.log(uid)
       
       //e.preventDefault();     //?
-      var querryStr =  "http://localhost:3000/user/by-email?email=" + uid;
+      var querryStr =  "https://devopskarl-rwdtppcoza-uc.a.run.app/user/by-email?email=" + uid;
       // console.log(querryStr);
       $.getJSON(querryStr, mydata );
     

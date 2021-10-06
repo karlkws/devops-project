@@ -18,7 +18,7 @@ function confirm() {
           gbp = value
         }; 
     
-      $.getJSON("http://localhost:3000/admin", function (response) {
+      $.getJSON("https://devopskarl-rwdtppcoza-uc.a.run.app/admin", function (response) {
           var email = response.e_mail;
           var u_id = response.user_id; // retrieve logged session's user_id
     
@@ -55,7 +55,7 @@ function addtran(postdata){// pass your data in method
   // $.ajax({})
   $.ajax({
           type: "POST",
-          url: "http://localhost:3000/transaction/add-transaction",
+          url: "https://devopskarl-rwdtppcoza-uc.a.run.app/transaction/add-transaction",
           data: postDataJSON,// now data come in this function
           contentType: "application/json; charset=UTF-8", // standard
           crossDomain: true, // for security purpose
@@ -83,7 +83,7 @@ function updatebalance(postdata){// pass your data in method
   // $.ajax({})
   $.ajax({
           type: "PUT",
-          url: "http://localhost:3000/user/updatebalance",
+          url: "https://devopskarl-rwdtppcoza-uc.a.run.app/user/updatebalance",
           data: postDataJSON,// now data come in this function
           contentType: "application/json; charset=UTF-8", // standard
           crossDomain: true, // for security purpose

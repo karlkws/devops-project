@@ -12,6 +12,11 @@ body {
   
 } 
 
+balance {
+  justify-content: center;
+  align-items: center;
+}
+
 table {
      font-family: arial, sans-serif;
      border-collapse: collapse;
@@ -86,26 +91,6 @@ ol {
     border: 1px solid #315ef0;
   }
 
-/* button {
-
-    margin: 15px auto 0;
-    padding: 3px 20px;
-
-   
-    font-size: 14px;
-    text-align: center;
-    border : 1px solid #2C3539;
-    text-transform: uppercase;
-    
-}
-
-button:hover {
-    transition: 0.5s;
-    background-color: #8458B3;
-    color: #e5eaf5;
-    text-decoration: underline;
-    letter-spacing: 0.5px;
-} */
 
 #logo {
   display: inline-block;

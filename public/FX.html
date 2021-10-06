@@ -31,10 +31,11 @@
 
 
         <label for="Date"><strong>Transaction Date:</strong><br><small>(YYYY-MM-DD)</small></label><br>
-        <input type="text" id="transaction" name="Transaction Date" placeholder=""><br><br>
-
-     
-
+        <!-- <input type="text" id="transaction" name="Transaction Date" placeholder=""> -->
+        <input id="transaction" type='date' min='2020-01-01' max='2021-01-01'></input>
+        
+        
+        <br><br>
       </form>
       <br><button class="myButton3" onclick="getInputValue();">Get FX Quote</button>
       <button class = "myButton3" onclick="refresh()">Refresh</button>

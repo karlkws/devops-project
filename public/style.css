@@ -12,30 +12,30 @@ body {
   
 } 
 
-balance {
+.balance {
   justify-content: center;
   align-items: center;
 }
 
 table {
-     font-family: arial, sans-serif;
+     font-family: 'Lato', sans-serif;
      border-collapse: collapse;
      width: 50%;
      display: contents;
     justify-content: space-between;
     position: relative;
-   }
+}
    
 th {
      border: 1px solid #18191A;
      background-color : #a0d2eb;
      text-align: center;
      padding: 10px;
-   }
+}
 
 td {
     border: 1px solid #1a1a18;
-    background-color : #FFFEF7;
+    background-color : #b9b9b9;
     text-align: left;
     padding: 10px;
   }

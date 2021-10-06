@@ -25,10 +25,10 @@ table {
     border-collapse: collapse;
     width: 50%;
     display: contents;
-    justify-content: space-between;
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
    
 th {

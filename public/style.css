@@ -15,6 +15,8 @@ body {
 .balance {
   justify-content: center;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 table {
@@ -35,7 +37,7 @@ th {
 
 td {
     border: 1px solid #1a1a18;
-    background-color : #b9b9b9;
+    background-color : #e6e6e6;
     text-align: left;
     padding: 10px;
   }

@@ -1,6 +1,10 @@
 # NUS Fintech DevOps Project #2: CI/CD
 
-App source code cloned from PC2- Toolkit #2 NUS Money Project: https://github.com/karlkws/nusmoney-b13g1
+App source code from Toolkit #2 NUS Money Project: https://github.com/karlkws/nusmoney-b13g1
+
+Live website URL: 
+
+https://devopskarl-rwdtppcoza-uc.a.run.app
 
 ## Desired Outcome: 
 
